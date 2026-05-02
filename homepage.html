@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Langer - My Personal Page</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    nav {
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+      padding: 16px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+    nav .logo { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: 2px; }
+    nav .nav-links { display: flex; gap: 24px; list-style: none; }
+    nav .nav-links a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 16px; font-weight: 500; transition: color .3s; }
+    nav .nav-links a:hover { color: #ffd700; }
+    .hero {
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 80px 20px 60px;
+    }
+    .hero-content { max-width: 700px; }
+    .avatar {
+      width: 160px; height: 160px; border-radius: 50%;
+      background: linear-gradient(135deg, #ffd700, #ff6b6b);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px; font-size: 64px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.3);
+      border: 6px solid rgba(255,255,255,.5);
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .hero h1 { font-size: 52px; color: #fff; margin-bottom: 12px; text-shadow: 0 4px 12px rgba(0,0,0,.2); }
+    .hero .tagline { font-size: 20px; color: rgba(255,255,255,.85); margin-bottom: 8px; }
+    .hero .location { font-size: 18px; color: rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .sections { max-width: 960px; margin: 0 auto; padding: 0 20px 60px; display: grid; gap: 24px; }
+    .card {
+      background: rgba(255,255,255,.95); border-radius: 20px; padding: 36px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15); transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,.2); }
+    .card h2 { font-size: 28px; color: #4a3980; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .info-item { background: #f0ecff; padding: 20px; border-radius: 14px; text-align: center; transition: background .3s; }
+    .info-item:hover { background: #e1d8ff; }
+    .info-item .emoji { font-size: 36px; margin-bottom: 6px; }
+    .info-item .label { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .info-item .value { font-size: 18px; font-weight: 700; color: #333; }
+    .hobbies { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .hobby-card { text-align: center; padding: 28px 16px; border-radius: 16px; background: #fff; border: 2px solid #e8e1ff; transition: all .3s; }
+    .hobby-card:hover { border-color: #667eea; background: #f9f7ff; }
+    .hobby-card .icon { font-size: 64px; margin-bottom: 12px; }
+    .hobby-card h3 { font-size: 22px; color: #4a3980; margin-bottom: 8px; }
+    .hobby-card p { color: #777; font-size: 14px; line-height: 1.6; }
+    .fun-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 16px; }
+    .fun-tag { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; }
+    footer { text-align: center; padding: 32px 20px; color: rgba(255,255,255,.7); font-size: 14px; }
+    html { scroll-behavior: smooth; }
+    @media (max-width:600px) {
+      .hero h1 { font-size: 36px; }
+      nav { padding: 12px 16px; }
+      nav .nav-links { gap: 12px; }
+      .card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">⚡ Langer</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#info">Info</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="avatar">🏀</div>
+      <h1>Hey, I'm Langer!</h1>
+      <p class="tagline">11 years old · Student at Avenues · Sports Lover</p>
+      <p class="location">🌏 Shenzhen, Guangdong, China</p>
+    </div>
+  </section>
+  <div class="sections">
+    <div class="card" id="about">
+      <h2>👋 About Me</h2>
+      <p style="font-size:17px;color:#555;line-height:1.8;">
+        Hi! My name is <strong>Langer</strong>. I'm an <strong>11-year-old boy</strong> from
+        <strong>Shenzhen, Guangdong, China</strong>. I go to <strong>Avenues School</strong>,
+        where I love learning and hanging out with my friends. I'm <strong>167cm</strong> tall
+        and growing fast! I believe in staying active, having fun, and always trying my best.
+      </p>
+    </div>
+    <div class="card" id="hobbies">
+      <h2>🎯 My Hobbies</h2>
+      <div class="hobbies">
+        <div class="hobby-card">
+          <div class="icon">🏀</div>
+          <h3>Basketball</h3>
+          <p>I love playing basketball — shooting hoops, dribbling, and playing games with my teammates. It's my favorite sport!</p>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">🎾</div>
+          <h3>Tennis</h3>
+          <p>Tennis is super fun too! I enjoy hitting the ball, running on the court, and getting better every day.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="info">
+      <h2>📋 Quick Info</h2>
+      <div class="info-grid">
+        <div class="info-item"><div class="emoji">👤</div><div class="label">Name</div><div class="value">Langer</div></div>
+        <div class="info-item"><div class="emoji">🎂</div><div class="label">Age</div><div class="value">11 Years</div></div>
+        <div class="info-item"><div class="emoji">🚹</div><div class="label">Gender</div><div class="value">Boy</div></div>
+        <div class="info-item"><div class="emoji">📏</div><div class="label">Height</div><div class="value">167 cm</div></div>
+        <div class="info-item"><div class="emoji">🏫</div><div class="label">School</div><div class="value">Avenues</div></div>
+        <div class="info-item"><div class="emoji">📍</div><div class="label">From</div><div class="value">Shenzhen, Guangdong</div></div>
+      </div>
+      <div class="fun-facts">
+        <span class="fun-tag">🏀 Basketball</span>
+        <span class="fun-tag">🎾 Tennis</span>
+        <span class="fun-tag">🇨🇳 China</span>
+        <span class="fun-tag">📚 Student</span>
+        <span class="fun-tag">⚡ Sports Fan</span>
+      </div>
+    </div>
+  </div>
+  <footer><p>Made with ❤️ — Langer © 2026</p></footer>
+</body>
+</html>
