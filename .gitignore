@@ -1,4 +1,6 @@
 .qoder/
 .DS_Store
-*.png
-project/
+/*.png
+
+# Local Netlify folder
+.netlify
