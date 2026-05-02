@@ -4,3 +4,6 @@
 
 # Local Netlify folder
 .netlify
+
+# F1 game has its own repo
+project/f1-game/
